@@ -1,0 +1,43 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:userControls="clr-namespace:ShadowColorizer.UserControls"
+        mc:Ignorable="d"
+        d:DesignWidth="1120" d:DesignHeight="415"
+        Width="1120" Height="415"
+        x:Class="ShadowColorizer.Windows.ShadowColorAdjuster"
+        Title="Shadow Color Adjuster"
+        CanResize="False">
+    <Grid RowDefinitions="Auto, *"> 
+        <Grid Grid.Row="0" ColumnDefinitions="25*, 75*" Margin="10">
+            <Grid Grid.Column="0" RowDefinitions="Auto" Margin="0,0,10,0">
+                <Image Grid.Row="0" Name="PreviewImage"/>
+            </Grid>
+            <Grid Grid.Column="1" RowDefinitions="*, *">
+                <userControls:ColorPicker Width="820" Height="170" Name="MainColorPicker" Grid.Row="0" Margin="0,0,0,5"/>
+                <userControls:ColorPicker Width="820" Height="170" Name="AccentColorPicker" Grid.Row="1" Margin="0,5,0,0"/>
+            </Grid>
+        </Grid>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="10,0,0,10" Spacing="5">
+            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="OpenButton">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Open Saved Colors</TextBlock>
+            </Button>
+            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="SaveButton">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Save Current Colors</TextBlock>
+            </Button>
+            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="ExportButton">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Export Textures To Game</TextBlock>
+            </Button>
+            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="OpenTextureFolderButton">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Open Custom Texture Folder</TextBlock>
+            </Button>
+			<Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="SetNewDolphinUserFolderButton">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Set New Dolphin User Folder</TextBlock>
+			</Button>
+        </StackPanel>
+        <Button Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,10" Name="CloseButton">
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Close</TextBlock>
+        </Button>
+    </Grid>
+</Window>
