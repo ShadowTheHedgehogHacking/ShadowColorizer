@@ -7,7 +7,7 @@
         d:DesignWidth="1120" d:DesignHeight="415"
         Width="1120" Height="415"
         x:Class="ShadowColorizer.Windows.ShadowColorAdjuster"
-        Title="Shadow Color Adjuster"
+        Title="Shadow Color Adjuster 2026.11.25"
         CanResize="False">
     <Grid RowDefinitions="Auto, *"> 
         <Grid Grid.Row="0" ColumnDefinitions="25*, 75*" Margin="10">
